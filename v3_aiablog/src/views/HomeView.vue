@@ -6,11 +6,11 @@
         <v-row>
           <v-col cols="5">
             <div style="position: relative" class="mt-16">
-              <h1 class="text-grey">Hello,</h1>
-              <h1 class="text-white">I'M Lara Elizabeth</h1>
-              <span class="text-grey">Web Designer & Developer</span><br />
+              <h1 class="text-grey">Welcome to</h1>
+              <h1 class="text-white">Car Customes</h1>
+              <span class="text-grey">Your one-stop place for Lancer mods</span><br />
 
-              <v-btn tile dark class="text-red mt-8" variant="outlined">
+              <v-btn tile dark class="text-red mt-8" @click="scroll('contact')" variant="outlined">
                 Contact me
               </v-btn>
             </div>
@@ -174,7 +174,7 @@
                 <v-card-title> We provide you the best </v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  By AIAllanigue | 06 Sep 2022
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -189,7 +189,7 @@
                 <v-card-title> We provide you the best </v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  By AIAllanigue | 06 Sep 2022
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -204,7 +204,7 @@
                 <v-card-title> We provide you the best </v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  By AIAllanigue | 06 Sep 2022
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -347,6 +347,13 @@ export default defineComponent({
     NavBar,
     FooterView
 },
+
+methods: {
+      scroll(refName) {
+        const element = document.getElementById(refName);
+        element.scrollIntoView({ behavior: "smooth" });
+      },
+    },
 });
 </script>
 <style scoped>
@@ -369,29 +376,12 @@ export default defineComponent({
   top: 0;
   left: 0;
   height: 100%;
-  width: 40%;
+  width: 100%;
   background: black;
-  transform: skew(49deg, 0deg);
+  transform: skew(0deg, 2deg);
 }
-.head:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 40%;
-  background: red;
-  transform: skew(49deg, 0deg);
-}
-.egg {
-  display: block;
-  margin-left: 100px;
-  margin-top: 50px;
-  width: 356px;
-  height: 300px;
-  background-color: #ff3535;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-}
+
+
 .first {
   width: 100%;
   height: 280px;
