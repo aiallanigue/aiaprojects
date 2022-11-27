@@ -6,13 +6,16 @@
       
   
       <v-spacer></v-spacer>
-      <v-btn text @click="scroll('home')" class="text-red">Home</v-btn>
-      <v-btn text @click="scroll('about')"  >About</v-btn>
-      <v-btn text @click="scroll('portfolio')"  >Parts</v-btn>
-      <v-btn text @click="scroll('services')" > Services</v-btn>
-      <v-btn text @click="scroll('page')"  > Testimonials</v-btn>
-      <v-btn text @click="scroll('biog')"  > Gallery</v-btn>
-      <v-btn text @click="scroll('contact')"  > Contact</v-btn>
+      <router-link class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" to="/">Home</router-link>
+      <router-link class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" to="/about">About</router-link>
+      <!-- <v-btn text @click="scroll('home')" class="text-red">Home</v-btn>
+      <v-btn text @click="scroll('about')"  >About</v-btn> -->
+      <v-btn text class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" @click="scroll('portfolio')"  >Parts</v-btn>
+      <v-btn text class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" @click="scroll('services')" > Services</v-btn>
+      <v-btn text class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" @click="scroll('page')"  > Testimonials</v-btn>
+      <v-btn text class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" @click="scroll('biog')"  > Gallery</v-btn>
+      <router-link class="rtr-nav v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" to="/contact">Contact</router-link>
+      <!-- <v-btn text @click="scroll('contact')"  > Contact</v-btn> -->
     </v-app-bar>
   </template>
   
@@ -27,5 +30,8 @@
   };
   </script>
   
-  <style>
+  <style scoped>
+    .rtr-nav:hover {
+      color: red;
+    }
   </style>
