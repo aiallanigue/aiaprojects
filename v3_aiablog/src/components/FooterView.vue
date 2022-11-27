@@ -4,7 +4,7 @@
         elevation="0"
         rounded="0"
         width="100%"
-        class="bg-grey text-center"
+        class="bg-black text-center"
       >
         <v-card-text>
           <v-btn
